@@ -19,7 +19,17 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-http": "^4.2.0",
+    "formidable": "^1.2.1",
     "mocha": "^5.2.0",
-    "should": "^13.2.3"
+    "pg": "^7.7.1",
+    "pg-hstore": "^2.3.2",
+    "plaintextparser": "^1.0.3",
+    "should": "^13.2.3",
+    "socket.io": "^2.2.0"
+  },
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "sequelize": "^4.42.0"
   }
 }

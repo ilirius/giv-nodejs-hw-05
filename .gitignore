@@ -66,3 +66,4 @@ server/public/images/upload/*
 
 .yarnrc
 .vscode
+docker

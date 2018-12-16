@@ -1,0 +1,45 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "extends": ["standard", "eslint:recommended", "prettier", "prettier/standard"],
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true,
+            "generators": false,
+            "objectLiteralDuplicateProperties": false,
+            "experimentalObjectRestSpread": true
+        }
+    },
+    "plugins": ["prettier"],
+    "globals": {
+        "$": false
+    },
+    "rules": {
+        "comma-style": [2, "last"],
+        "indent": ["error", 2],
+        "linebreak-style": ["error", "unix"],
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"],
+        "no-console": "off",
+        "no-unused-vars": [
+            "error",
+            {
+                "no-unused-vars": [
+                    "error",
+                    {
+                        "vars": "all",
+                        "args": "after-used",
+                        "ignoreRestSiblings": false
+                    }
+                ]
+            }
+        ]
+    }
+}

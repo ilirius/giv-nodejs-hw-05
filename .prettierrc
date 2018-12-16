@@ -1,0 +1,15 @@
+{
+  "printWidth": 100,
+  "semi": true,
+  "trailingComma": "all",
+  "overrides": [{
+    "files": "*.js",
+    "options": {
+      "singleQuote": true
+    },
+    "files": "*.mjs",
+    "options": {
+      "singleQuote": true
+    }
+  }]
+}
