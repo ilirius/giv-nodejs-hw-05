@@ -65,3 +65,4 @@ mnt/
 server/public/images/upload/*
 
 .yarnrc
+.vscode
