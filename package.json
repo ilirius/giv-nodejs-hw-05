@@ -5,7 +5,8 @@
   "main": "app.mjs",
   "scripts": {
     "test": "mocha --exit",
-    "start": "NODE_OPTIONS=--experimental-modules node app.mjs"
+    "start": "NODE_OPTIONS=--experimental-modules node app.mjs",
+    "develop": "NODE_OPTIONS=--experimental-modules nodemon app.mjs"
   },
   "repository": {
     "type": "git",

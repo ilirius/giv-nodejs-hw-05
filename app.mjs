@@ -35,8 +35,7 @@ registers(app).then(() => {
   //   // next();
   // });
 
-  app.http.listen(process.env.PORT || 3000, () => {
-    console.log('Server start to port ', process.env.PORT || 3000);
-    console.log(`http://localhost:${process.env.PORT || 3000}`);
+  app.http.listen(process.env.PORT, () => {
+    console.log('Server start to port ', process.env.PORT);
   });
 });

@@ -13,14 +13,14 @@ export default class UserModel {
   async getAllUser() {
     try {
       return await this.__sequelize.models.user.findAll({
-        include: [{
-          model: this.__sequelize.models.permission,
           include: [{
-            all: true,
-            nested: true
-          }],
-        }]
-      })
+            model: this.__sequelize.models.permission,
+            include: [{
+              all: true,
+              nested: true
+            }],
+          }]
+        })
         .then(data => !(data instanceof Array) ? data.get({
           plain: true
         }) : data);
@@ -146,11 +146,16 @@ export default class UserModel {
    * @memberof UserModel
    */
   async updateUserPermissionById(userId, newPermissions) {
-    /**
-     * TODO: Сделать обновление прав
-     */
     try {
-      // 
+      Object.keys(newPermissions.permission).forEach(async element => {
+        const permission = newPermissions.permission[element];
+        this.__sequelize.models[element].findOne({
+            where: {
+              'id': permission.id
+            }
+          })
+          .then(data => data.update(permission));
+      });
     } catch (error) {
       throw new Error(error);
     }
