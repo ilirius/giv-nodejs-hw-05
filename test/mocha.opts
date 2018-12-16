@@ -1,0 +1,5 @@
+#--recursive
+--reporter nyan
+#--require babel-core/register
+--timeout 7000
+#--reporter spec
