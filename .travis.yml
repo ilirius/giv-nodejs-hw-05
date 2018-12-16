@@ -2,8 +2,10 @@ language: node_js
 node_js:
   - 'stable'
 
+cache: yarn
+
 script:
-  - npm test
+  - yarn test
 
 deploy:
   provider: heroku
