@@ -1,11 +1,14 @@
-
 language: node_js
 node_js:
-  - 11
+  - 'stable'
+
 script:
   - npm test
 
 deploy:
   provider: heroku
-  api_key: $HEROKU_KEY
-  app: giv-loftschool-nodejs-hw-05
+  api_key:
+    secure: $HEROKU_KEY
+  strategy: git
+  app:
+    master: giv-loftschool-nodejs-hw-05
