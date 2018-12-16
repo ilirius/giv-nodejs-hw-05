@@ -60,6 +60,6 @@ export default async (app) => {
   }
 
   socketChat(app);
-  // sequelize.sync();
+  sequelize.sync();
   // sequelize.sync({ force: true });
 };
