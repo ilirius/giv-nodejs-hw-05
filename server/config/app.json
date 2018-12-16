@@ -1,0 +1,6 @@
+{
+  "paths": {
+    "public": "/public",
+    "upload": "/images/upload"
+  }
+}
